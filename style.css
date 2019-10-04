@@ -1,0 +1,25 @@
+body {
+  min-width: 450px;
+  padding: 0.5rem;
+  white-space: nowrap;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.app-column {
+  margin-bottom: 0.5rem;
+}
+td {
+  font-size: 13px;
+}
+td.value {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: inconsolata, Fira Code, Courier;
+  font-size: 12px;
+}
+td.value:hover {
+  overflow: auto;
+  text-overflow: initial;
+}
