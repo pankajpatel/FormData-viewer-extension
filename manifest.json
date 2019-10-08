@@ -5,6 +5,7 @@
   "version": "0.1",
   "browser_action": {
     "default_icon": "icon-switch.png",
+    "default_title": "FormData Viewer",
     "default_popup": "popup.html"
   },
   "permissions": [

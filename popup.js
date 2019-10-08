@@ -37,7 +37,7 @@ var nodeGenerator = function(value){
     });
     return fragment;
   }
-  
+
   if (typeof value === 'object') {
     return generateTable(value);
   }
@@ -53,22 +53,32 @@ var generateView = function(data) {
   var details = document.createElement('details');
   var summary = document.createElement('summary');
   var code = document.createElement('code');
+  code.classList.add('text-success');
+  code.innerText = data.formName || '';
+  if(!data.formName) {
+    code = document.createElement('small');
+    code.innerText = 'Unnamed Form';
+    code.classList.add('text-warning');
+    code.classList.add('font-weight-light');
+    code.classList.add('font-italic');
+  }
   var fieldCount = Object.keys(data.formData).length;
-  code.innerText = data.formName 
-  
+
   var span = document.createElement('small');
   span.innerText = 'Fields: ' + fieldCount;
   span.classList.add('text-muted')
   span.classList.add('float-right')
 
   summary.appendChild(span);
-  
+
   fieldCount && details.setAttribute('open', fieldCount)
   !fieldCount && code.classList.add('text-muted');
   var table = generateTable(data.formData);
   summary.appendChild(code);
   details.appendChild(summary);
   details.appendChild(table);
+
+  details.classList.add('clearfix');
 
   details.id = data.formName;
   return details;
@@ -91,6 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
           target.appendChild(generateView(obj))
         });
       });
-    })
-  })
+    });
+  });
 });
