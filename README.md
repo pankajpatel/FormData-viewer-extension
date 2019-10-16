@@ -1,9 +1,7 @@
-<center>
-<img src="icons/icon-switch-128.png" width="100"/>
-<h1>FormData-viewer-extension</h1>
-</center>
-
----
+<div style="text-align:center">
+  <img src="icons/icon-switch-128.png" width="100"/>
+  <h1>FormData-viewer-extension</h1>
+</div>
 
 Extension to view the FormData of all the forms on the page
 
