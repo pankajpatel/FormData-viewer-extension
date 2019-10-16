@@ -27,7 +27,7 @@ var generateTable = function (formData) {
   return table;
 }
 
-var nodeGenerator = function(value){
+var nodeGenerator = function (value) {
   if (value instanceof Array) {
     var fragment = document.createDocumentFragment();
     value.forEach(v => {
@@ -46,7 +46,7 @@ var nodeGenerator = function(value){
   return text;
 }
 
-var generateView = function(data) {
+var generateView = function (data) {
   if (!data.formData) {
     return document.createComment('No Data for: ' + data.formName);
   }
@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
   reload.addEventListener('click', () => {
     getCurrentTab().then(tab => {
       var message = {type: 'getData' };
-      chrome.tabs.sendMessage(tab.id, message, function(response) {
-        response.data.forEach(function(data){
+      chrome.tabs.sendMessage(tab.id, message, function (response) {
+        response.data.forEach(function (data) {
           var obj = {
             formName: data.form || data.name,
             formData: data.data,
