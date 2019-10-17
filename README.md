@@ -5,7 +5,9 @@
 
 Extension to view the FormData of all the forms on the page
 
-Shows hidden forms and hidden fields. Read full article here: https://time2hack.com/2019/10/introducing-formdata-viewer-extension-html-forms/
+Shows hidden forms and hidden fields.
+
+You can read the introduction here: https://time2hack.com/2019/10/introducing-formdata-viewer-extension-html-forms/
 
 
 <a href="https://chrome.google.com/webstore/detail/formdata-viewer/mnjfjpoendmmboclknfcllimnneeiflg?hl=en">
